@@ -5,13 +5,16 @@
 <body>
 <script>
 
-	var wrongCount = 0;
-	var correctCount = 0;
 
 	function play() {
+		var wrongCount = 0;
+		var correctCount = 0;
 		var question1Input = "";
+		var question2Input = "";
+		var question3Input = "";
 		var inputquestion1 = document.getElementsByName("question1");
-		
+		var inputquestion2 = document.getElementsByName("question2");
+		var inputquestion3 = document.getElementsByName("question3");
 
 		for(var i = 0; i < inputquestion1.length; i++) { 
                 if(inputquestion1[i].checked) {
@@ -23,21 +26,69 @@
                 }
         else {
 
-			if(question1Input == "choice1-1") {
+			if(question1Input == "1") {
 				wrongCount++;
 			}
-			else if (question1Input == "choice1-2") {
+			else if (question1Input == "2") {
 				correctCount++;
 			}
-			else if (question1Input == "choice1-3") {
+			else if (question1Input == "3") {
 				wrongCount++;
 			}
-			else if (question1Input == "choice1-4") {
+			else if (question1Input == "4") {
 				wrongCount++;
 			}
-
-			document.getElementById("answers").innerHTML = "<p>You got " + correctCount + " correct and " + wrongCount + " wrong!</p>";
 		}
+
+		for(var i = 0; i < inputquestion2.length; i++) { 
+                if(inputquestion2[i].checked) {
+                	question2Input = inputquestion2[i].value;
+                }  
+		}
+        if(question2Input == "") {
+                alert("Please select an option.");
+                }
+        else {
+
+			if(question2Input == "1") {
+				wrongCount++;
+			}
+			else if (question2Input == "2") {
+				wrongCount++;
+			}
+			else if (question2Input == "3") {
+				correctCount++;
+			}
+			else if (question2Input == "4") {
+				wrongCount++;
+			}
+		}
+
+		for(var i = 0; i < inputquestion3.length; i++) { 
+                if(inputquestion3[i].checked) {
+                	question3Input = inputquestion3[i].value;
+                }  
+		}
+        if(question3Input == "") {
+                alert("Please select an option.");
+                }
+        else {
+
+			if(question3Input == "1") {
+				correctCount++;
+			}
+			else if (question3Input == "2") {
+				wrongCount++;
+			}
+			else if (question3Input == "3") {
+				wrongCount++;
+			}
+			else if (question3Input == "4") {
+				wrongCount++;
+			}
+		}
+			document.getElementById("answers").innerHTML = "<p>You got " + correctCount + " correct and " + wrongCount + " wrong!</p>";
+		
 
 	}
 </script>
@@ -53,16 +104,43 @@ table, th, td {
     <td colspan=3>What is the distance that the CDC recommends you maintain between another person?</td>
   </tr>
   <tr>
-    <td><input type="radio" name="question1" value="choice1-1" >
+    <td colspan=3><input type="radio" name="question1" value="1" >
   <label for="choice1-1">5 feet</label><br>
-  <input type="radio" name="question1" value="choice1-2" >
+  <input type="radio" name="question1" value="2" >
   <label for="choice1-2">6 feet</label><br>
-  <input type="radio" name="question1" value="choice1-3" >
+  <input type="radio" name="question1" value="3" >
   <label for="choice1-3">7 feet</label><br>
-  <input type="radio" name="question1" value="choice1-4" >
+  <input type="radio" name="question1" value="4" >
   <label for="choice1-4">8 feet</label></td>
-    <td><button onclick="play()">Submit!</button></td>
   </tr>
+  <tr>
+    <td colspan=3>What is not recommended by the CDC to do?</td>
+  </tr>
+  <tr>
+    <td colspan=3><input type="radio" name="question2" value="1" >
+  <label for="choice2-1">Wear a mask</label><br>
+  <input type="radio" name="question2" value="2" >
+  <label for="choice2-2">Stay at home</label><br>
+  <input type="radio" name="question2" value="3" >
+  <label for="choice2-3">Hang out in crowded spaces</label><br>
+  <input type="radio" name="question2" value="4" >
+  <label for="choice2-4">Get tested for COVID</label></td>
+  </tr>
+  <tr>
+    <td colspan=3>Who is at increased risk of Covid?</td>
+  </tr>
+  <tr>
+    <td colspan=3><input type="radio" name="question3" value="1" >
+  <label for="choice3-1">The elderly</label><br>
+  <input type="radio" name="question3" value="2" >
+  <label for="choice3-2">The young</label><br>
+  <input type="radio" name="question3" value="3" >
+  <label for="choice3-3">The blind</label><br>
+  <input type="radio" name="question3" value="4" >
+  <label for="choice3-4">The deaf</label></td>
+  </tr>
+  <tr> 
+  	<td colspan=3><button onclick="play()">Submit!</button></td>
 </table>
 
 <div id="answers"> </div>
