@@ -1,0 +1,13 @@
+head{
+	font-weight: bold;
+}
+
+table, th, td {
+  border: 2px solid black;
+  background: grey;
+}
+
+body{
+	font-weight: normal;
+	background-color: lightblue;
+}
