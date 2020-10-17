@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title> A quiz about COVID</title>
+</head>
+<body>
+<script>
+
+	var wrongCount = 0;
+	var correctCount = 0;
+
+	function play() {
+		var question1Input = "";
+		var inputquestion1 = document.getElementsByName("question1");
+		
+
+		for(var i = 0; i < inputquestion1.length; i++) { 
+                if(inputquestion1[i].checked) {
+                	question1Input = inputquestion1[i].value;
+                }  
+		}
+        if(question1Input == "") {
+                alert("Please select an option.");
+                }
+        else {
+
+			if(question1Input == "choice1-1") {
+				wrongCount++;
+			}
+			else if (question1Input == "choice1-2") {
+				correctCount++;
+			}
+			else if (question1Input == "choice1-3") {
+				wrongCount++;
+			}
+			else if (question1Input == "choice1-4") {
+				wrongCount++;
+			}
+
+			document.getElementById("answers").innerHTML = "<p>You got " + correctCount + " correct and " + wrongCount + " wrong!</p>";
+		}
+
+	}
+</script>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+<table>
+  <tr>
+    <td colspan=3>What is the distance that the CDC recommends you maintain between another person?</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="question1" value="choice1-1" >
+  <label for="choice1-1">5 feet</label><br>
+  <input type="radio" name="question1" value="choice1-2" >
+  <label for="choice1-2">6 feet</label><br>
+  <input type="radio" name="question1" value="choice1-3" >
+  <label for="choice1-3">7 feet</label><br>
+  <input type="radio" name="question1" value="choice1-4" >
+  <label for="choice1-4">8 feet</label></td>
+    <td><button onclick="play()">Submit!</button></td>
+  </tr>
+</table>
+
+<div id="answers"> </div>
+</body>
+</html>
