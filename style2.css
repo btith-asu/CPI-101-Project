@@ -17,6 +17,10 @@ h1, h2, #spanh{
 	font-size: 35px;
 }
 
+h3{
+	font-family: roboto;
+	font-size: 28px;
+}
 
 #p1, ul, li, #spanp{
 	font-family: roboto;
