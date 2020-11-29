@@ -76,23 +76,23 @@ function play()
 
 
 	var user_value = document.getElementById('game_form').useroption.value;
-		document.getElementById('yourSelection').innerHTML = user_value;
+	document.getElementById('yourSelection').innerHTML = user_value;
 		if (user_value == "Rock")
 			{
-			rock_counter++;
-			document.getElementById('rock#').innerHTML = rock_counter;	
+			rock_counter++;	
 			}
 		else if (user_value == "Paper")
 			{
 			paper_counter++;
-			document.getElementById('paper#').innerHTML = paper_counter;	
 			}
 		else if (user_value == "Scissors")
 			{
 			scissor_counter++;
-			document.getElementById('scissors#').innerHTML = scissor_counter;	
+				
 			}
-
+	document.getElementById('rock#').innerHTML = rock_counter;
+	document.getElementById('paper#').innerHTML = paper_counter;
+	document.getElementById('scissors#').innerHTML = scissor_counter;
 }
 
 
