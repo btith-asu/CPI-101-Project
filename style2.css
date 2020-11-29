@@ -20,7 +20,7 @@ h1, h2{
 
 p, ul, li{
 	font-family: roboto;
-	font-size: 200%;
+	font-size: 120%;
 }
 
 a, a:link, a:visited{
@@ -28,7 +28,7 @@ a, a:link, a:visited{
 }
 
 a:hover{
-	color:hotpink;
+	color:lightpink;
 }
 
 a:active{
