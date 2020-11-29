@@ -14,13 +14,13 @@ body{
 
 h1, h2{
 	font-family: roboto;
-	font-size: 150%;
+	font-size: 35px;
 }
 
 
 p, ul, li{
 	font-family: roboto;
-	font-size: 120%;
+	font-size: 20px;
 }
 
 a, a:link, a:visited{
