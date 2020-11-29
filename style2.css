@@ -3,28 +3,23 @@ head{
 }
 
 table, th, td {
-  border: 2px solid black;
-  background: grey;
+	font-family: roboto;
+  	border: 2px solid black;
+ 	background: grey;
 }
 
 body{
-	font-weight: normal;
 	background-color: lightblue;
 }
 
-h1{
+h1, h2{
+	font-family: roboto;
 	font-size: 150%;
 }
 
-h2{
-	font-size: 150%;
-}
 
-p{
-	font-size: 200%;
-}
-
-li{
+p, ul, li{
+	font-family: roboto;
 	font-size: 200%;
 }
 
