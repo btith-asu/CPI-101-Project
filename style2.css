@@ -12,13 +12,13 @@ body{
 	background-color: lightblue;
 }
 
-h1, h2{
+h1, h2, #spanh{
 	font-family: roboto;
 	font-size: 35px;
 }
 
 
-p, ul, li, span{
+p, ul, li, #spanp{
 	font-family: roboto;
 	font-size: 23px;
 }
