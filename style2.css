@@ -12,19 +12,23 @@ body{
 	background-color: lightblue;
 }
 
+h1{
+	font-size: 150%;
+}
+
+h2{
+	font-size: 150%;
+}
+
 p{
-	font-size: 130%;
+	font-size: 200%;
 }
 
 li{
-	font-size: 130%;
+	font-size: 200%;
 }
 
-a:link{
-	color: white;
-}
-
-a:visited{
+a, a:link, a:visited{
 	color: white;
 }
 
