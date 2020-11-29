@@ -12,3 +12,27 @@ body{
 	background-color: lightblue;
 }
 
+p{
+	font-size: 130%;
+}
+
+li{
+	font-size: 130%;
+}
+
+a:link{
+	color: white;
+}
+
+a:visited{
+	color: white;
+}
+
+a:hover{
+	color:hotpink;
+}
+
+a:active{
+	color:lightgreen;
+}
+
